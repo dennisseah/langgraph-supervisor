@@ -20,6 +20,7 @@ pyright = "^1.1.391"
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
 pytest-mock = "^3.14.0"
+poetry-plugin-export = "^1.8.0"
 
 [build-system]
 requires = ["poetry-core"]
