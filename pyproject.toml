@@ -10,8 +10,8 @@ python = "^3.12"
 langgraph = "^0.2.60"
 azure-identity = "^1.19.0"
 langchain-openai = "^0.2.14"
-lagom = "^2.7.5"
 python-dotenv = "^1.0.1"
+lagom = "^2.7.5"
 
 
 [tool.poetry.group.dev.dependencies]
