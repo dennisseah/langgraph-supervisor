@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "langgraph-supervisor"
+version = "0.1.0"
+description = ""
+authors = ["Dennis Seah <dennis.seah@microsoft.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langgraph = "^0.2.60"
+azure-identity = "^1.19.0"
+langchain-openai = "^0.2.14"
+lagom = "^2.7.5"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.5"
+pyright = "^1.1.391"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+exclude = ["typings"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "TID"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+exclude = ["typings", ".venv", ".vscode", ".git"]
+
+[tool.coverage.run]
+omit = [
+    "*/__init__.py",
+    "langgraph_supervisor/hosting.py",
+    "langgraph_supervisor/protocols/*",
+    "langgraph_supervisor/graph.py",
+    "langgraph_supervisor/tools/*.py"
+]
