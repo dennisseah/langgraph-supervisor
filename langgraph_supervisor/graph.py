@@ -108,9 +108,9 @@ async def run(graph: CompiledStateGraph):
         {
             "messages": [
                 HumanMessage(
-                    content="Advise me to keep my money in saving account if the saving interest "
-                    "rate higher than the CD interest rate. Otherwise, advise me to "
-                    "put my money in CD account.",
+                    content="Advise me to keep my money in saving account if the "
+                    "saving interest rate higher than the CD interest rate. "
+                    "Otherwise, advise me to put my money in CD account.",
                 )
             ]
         },
@@ -125,7 +125,7 @@ async def run(graph: CompiledStateGraph):
                     print(f"Agent {agent_name}: {message.content}")
                 elif message.tool_calls:
                     for tool_call in message.tool_calls:
-                        print(f"Tool: {tool_call["name"]}")
+                        print(f'Tool: {tool_call["name"]}')
 
 
 if __name__ == "__main__":
